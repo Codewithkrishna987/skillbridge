@@ -73,6 +73,12 @@ export default async function StudentDashboardPage() {
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
+          <Link href="/student/resume" className="w-full sm:w-auto">
+            <Button size="sm" className="w-full sm:w-auto bg-amber-500 hover:bg-amber-400 text-white border-none shadow-sm">
+              <GraduationCap className="h-4 w-4" />
+              Upload Resume (AI)
+            </Button>
+          </Link>
           <Link href="/student/assessments" className="w-full sm:w-auto">
             <Button size="sm" className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white border-none shadow-sm">
               <Target className="h-4 w-4" />
@@ -87,6 +93,7 @@ export default async function StudentDashboardPage() {
           </Link>
         </div>
       </div>
+
 
       {/* Metric Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

@@ -32,6 +32,7 @@ export function Sidebar() {
 
   const studentLinks = [
     { href: "/student", label: "Dashboard Overview", icon: LayoutDashboard },
+    { href: "/student/resume", label: "Upload Resume (AI)", icon: FileCheck2 },
     { href: "/student/assessments", label: "Skill Assessments", icon: Target },
     { href: "/student/skill-gaps", label: "Skill Gap Analysis", icon: Layers },
     { href: "/student/opportunities", label: "Matched Opportunities", icon: Briefcase },

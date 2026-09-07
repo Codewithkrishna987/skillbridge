@@ -29,7 +29,7 @@ export default async function IndustryApplicationsPage() {
     status: app.status,
     skills: app.student.skills.map((s) => ({
       name: s.skill.name,
-      score: s.score,
+      score: s.score ?? 0,
     })),
     mentorEndorsement:
       app.mentorComments ||
