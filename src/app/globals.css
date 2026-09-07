@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-forest: #1B4332;
+    --color-moss: #74A97E;
+    --color-gold: #E8B84B;
+    --color-parchment: #F7F4EC;
+    --color-ink: #1F2420;
+    --color-cream-card: #FFFFFF;
+    --color-cream-border: #E4DFD1;
+
+    --background: 43 38% 95%; /* #F7F4EC Warm Parchment */
+    --foreground: 133 8% 13%; /* #1F2420 Warm Ink Charcoal */
+    --card: 0 0% 100%;
+    --card-foreground: 133 8% 13%;
+    --border: 41 27% 85%; /* #E4DFD1 */
+    --primary: 154 42% 18%; /* #1B4332 Forest */
+    --primary-foreground: 43 38% 95%;
+    --secondary: 42 77% 60%; /* #E8B84B Gold */
+    --secondary-foreground: 133 8% 13%;
+    --muted: 41 27% 90%;
+    --muted-foreground: 133 5% 42%;
+    --radius: 0.75rem;
+  }
+
+  body {
+    background-color: var(--color-parchment);
+    color: var(--color-ink);
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EDE7D9;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8C0AF;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9E9584;
+}
+
+/* Focus and interactive styles */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #1B4332;
+  box-shadow: 0 0 0 2px rgba(27, 67, 50, 0.15);
+}
