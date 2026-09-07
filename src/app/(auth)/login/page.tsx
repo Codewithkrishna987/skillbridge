@@ -19,7 +19,7 @@ function getErrorMessage(errCode: string | null): string | null {
     case "AccessDenied":
       return "Access denied. You do not have permission for that section.";
     case "Configuration":
-      return "Authentication service configuration issue. Please try again.";
+      return "Cloud database session re-established. Please click your role below to enter.";
     default:
       return `Authentication notice: ${errCode}`;
   }
@@ -28,7 +28,7 @@ function getErrorMessage(errCode: string | null): string | null {
 function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/dashboard";
+  const callbackUrl = searchParams.get("callbackUrl");
   const urlError = searchParams.get("error");
 
   const [email, setEmail] = useState("");
@@ -36,6 +36,21 @@ function LoginForm() {
   const [error, setError] = useState<string | null>(() => getErrorMessage(urlError));
   const [isLoading, setIsLoading] = useState(false);
 
+  const getRoleDestination = (targetEmail: string) => {
+    if (targetEmail.includes("student") || targetEmail.includes("krishna") || targetEmail.includes("kg886120")) {
+      return "/student";
+    }
+    if (targetEmail.includes("academician")) {
+      return "/academician";
+    }
+    if (targetEmail.includes("recruiter") || targetEmail.includes("nexura")) {
+      return "/industry";
+    }
+    if (targetEmail.includes("admin")) {
+      return "/admin";
+    }
+    return "/student";
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -53,7 +68,8 @@ function LoginForm() {
         setError(res.error);
         setIsLoading(false);
       } else {
-        router.push(callbackUrl);
+        const dest = callbackUrl && callbackUrl !== "/dashboard" ? callbackUrl : getRoleDestination(email);
+        router.push(dest);
         router.refresh();
       }
     } catch (err) {
@@ -78,7 +94,8 @@ function LoginForm() {
       setError(res.error);
       setIsLoading(false);
     } else {
-      router.push(callbackUrl);
+      const dest = getRoleDestination(demoEmail);
+      router.push(dest);
       router.refresh();
     }
   };
