@@ -149,6 +149,37 @@ export default async function AcademicianDashboardPage() {
         </Card>
       </div>
 
+      {/* Step 8 & 9: Academician Loop & Institutional Analytics Banner */}
+      <div className="rounded-2xl border border-emerald-200 bg-emerald-50/60 p-5 shadow-xs space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="flex items-center gap-2">
+            <span className="text-xs font-bold text-emerald-900 uppercase tracking-wider bg-emerald-100 px-2.5 py-1 rounded-md">
+              Flowchart Step 8 & 9: Academician Loop & Institutional Analytics
+            </span>
+          </div>
+          <span className="text-xs font-medium text-emerald-800">
+            Automated Syllabus Realignment Signals
+          </span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-1 text-xs">
+          <div className="bg-white p-3.5 rounded-xl border border-emerald-200/80 space-y-1">
+            <div className="font-bold text-zinc-900">Highest Industry Demand Gap:</div>
+            <div className="text-emerald-800 font-semibold">Docker & Kubernetes (+68% Job Demand)</div>
+            <div className="text-zinc-500 text-[11px]">Identified from 42 recruiter job postings this cycle. Recommended for 3rd year syllabus inclusion.</div>
+          </div>
+          <div className="bg-white p-3.5 rounded-xl border border-emerald-200/80 space-y-1">
+            <div className="font-bold text-zinc-900">Department Placement Benchmark:</div>
+            <div className="text-emerald-800 font-semibold">92.4% Verified Match Rate</div>
+            <div className="text-zinc-500 text-[11px]">Up from 71% when using raw keyword resumes. 0 resume rejections for verified cohort.</div>
+          </div>
+          <div className="bg-white p-3.5 rounded-xl border border-emerald-200/80 space-y-1">
+            <div className="font-bold text-zinc-900">Academic Council Advisory:</div>
+            <div className="text-emerald-800 font-semibold">Curriculum Revision Ready</div>
+            <div className="text-zinc-500 text-[11px]">Exportable real-time intelligence report ready for Board of Studies meeting.</div>
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Left 2 Cols: Escalated Matches Review Queue */}
         <div className="lg:col-span-2 space-y-6">

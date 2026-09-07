@@ -115,8 +115,215 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. PARADIGM SHIFT (Why Resume Keyword Screening Fails) */}
-      <section id="solution" className="py-20 sm:py-24 px-6 sm:px-8 lg:px-12 bg-parchment border-b border-cream-border">
+      {/* 2.5 TECH STACK STRIP (Mirroring the slide's tech stack sidebar) */}
+      <section className="bg-forest-dark border-y border-forest-light/20 py-6 px-6 sm:px-8 lg:px-12 text-parchment">
+        <div className="mx-auto max-w-7xl flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2">
+            <Badge variant="gold" className="text-[11px] font-bold tracking-wider uppercase">
+              Production Tech Stack
+            </Badge>
+            <span className="text-xs text-parchment/80 font-medium">Standardized for National Scale</span>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-2.5 text-xs">
+            {["Next.js 14", "Tailwind CSS", "React 18", "REST API", "TypeScript", "Prisma ORM", "LangGraph / AI", "Neon PostgreSQL", "NextAuth.js", "AWS / Cloud", "Vercel"].map((tech) => (
+              <span key={tech} className="px-2.5 py-1 rounded-md bg-white/10 border border-white/15 text-parchment font-medium shadow-xs hover:border-gold transition-colors">
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 3. SKILL PORTAL AI IMPLEMENTATION FLOW (5-STAGE HORIZONTAL PIPELINE) */}
+      <section id="ai-flow" className="py-20 sm:py-24 px-6 sm:px-8 lg:px-12 bg-white border-b border-cream-border">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <Badge variant="moss" className="text-xs">Proprietary AI Pipeline</Badge>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-forest">
+              Skill Portal AI Implementation Flow
+            </h2>
+            <p className="text-sm sm:text-base text-ink-muted leading-relaxed">
+              Our automated 5-stage intelligence pipeline transforms raw assessment telemetry into verified placements with human-in-the-loop escalation.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
+            {[
+              {
+                num: "01",
+                step: "Skill Data Indexing",
+                tag: "Taxonomy & Vector Embeddings",
+                desc: "Student assessment responses and industry skill requirements are structured and embedded in the database, with continuous checks to keep the skill taxonomy accurate and up to date.",
+              },
+              {
+                num: "02",
+                step: "Assessment Processing",
+                tag: "Real-Time Semantic Evaluation",
+                desc: "Each student's questionnaire and aptitude test responses are semantically matched against the current industry skill taxonomy to identify strengths and gaps in real time.",
+              },
+              {
+                num: "03",
+                step: "Skill Profile Generation",
+                tag: "Hybrid Recommendation Engine",
+                desc: "The recommendation engine combines the student's skill profile with live industry and internship data to generate personalized course, internship, and career suggestions.",
+              },
+              {
+                num: "04",
+                step: "Matching & Escalation",
+                tag: "Human-in-the-Loop Safeguard",
+                desc: "High-confidence matches are shown to the student instantly; ambiguous or low-confidence cases are flagged and routed to a mentor or academic advisor for manual review.",
+              },
+              {
+                num: "05",
+                step: "Continuous Feedback Loop",
+                tag: "Curriculum Adaptation Signal",
+                desc: "Outcomes from internships and placements, along with student and recruiter feedback, are fed back into the model to keep recommendations accurate over time.",
+              },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border border-cream-border bg-parchment/60 hover:bg-white p-6 shadow-xs transition-all hover:border-forest hover:shadow-md flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-xs font-bold text-forest bg-forest/10 px-2.5 py-1 rounded-full group-hover:bg-forest group-hover:text-white transition-colors">
+                      {item.num}
+                    </span>
+                    <span className="text-[10px] font-semibold tracking-wider uppercase text-gold">
+                      Phase {idx + 1}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-forest group-hover:text-forest-dark transition-colors">
+                    {item.step}
+                  </h3>
+                  <div className="text-[11px] font-medium text-ink-muted mt-0.5 mb-3">
+                    {item.tag}
+                  </div>
+                  <p className="text-xs text-ink-light leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+                <div className="mt-6 pt-3 border-t border-cream-border/60 flex items-center justify-between text-[11px] text-moss-dark font-medium">
+                  <span>Verified Pipeline</span>
+                  <CheckCircle2 className="h-4 w-4 text-moss" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. END-TO-END SKILL MAPPING & PLACEMENT FLOW (9-STEP CHRONOLOGICAL JOURNEY) */}
+      <section id="placement-flow" className="py-20 sm:py-24 px-6 sm:px-8 lg:px-12 bg-parchment border-b border-cream-border">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
+            <Badge variant="gold" className="text-xs">End-to-End Operational Lifecycle</Badge>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-forest">
+              End-to-End Skill Mapping & Placement Flow
+            </h2>
+            <p className="text-sm sm:text-base text-ink-muted leading-relaxed">
+              Complete traceable journey from onboarding to institutional analytics, linking candidate competencies directly to campus academic planning.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[
+              {
+                step: "01",
+                title: "Student Registration",
+                desc: "The student registers and logs into the unified Academia-Industry portal.",
+                role: "Student",
+                badge: "Onboarding",
+              },
+              {
+                step: "02",
+                title: "Skill Assessment",
+                desc: "The student completes AI-driven questionnaires and technical aptitude tests.",
+                role: "Evaluation",
+                badge: "Diagnostic",
+              },
+              {
+                step: "03",
+                title: "Profile Generation",
+                desc: "The system analyses test results to create a verified digital skill profile.",
+                role: "AI Engine",
+                badge: "Synthesis",
+              },
+              {
+                step: "04",
+                title: "Smart Matching",
+                desc: "The engine maps the profile to exact internships and jobs posted by industries.",
+                role: "AI Engine",
+                badge: "Matching",
+              },
+              {
+                step: "05",
+                title: "Student Applies",
+                desc: "The student reviews matched opportunities and submits applications directly.",
+                role: "Student",
+                badge: "Action",
+              },
+              {
+                step: "06",
+                title: "Application Tracking",
+                desc: "The portal tracks the application status through interviews to final placement.",
+                role: "Recruiter & Student",
+                badge: "Workflow",
+              },
+              {
+                step: "07",
+                title: "Feedback & Portfolio",
+                desc: "Mentor feedback and certificates auto-populate the student's digital portfolio.",
+                role: "Mentor & Student",
+                badge: "Verification",
+              },
+              {
+                step: "08",
+                title: "Academician Loop",
+                desc: "Academicians receive analytics to make data-driven curriculum updates.",
+                role: "Academician",
+                badge: "Feedback Loop",
+              },
+              {
+                step: "09",
+                title: "Institutional Analytics",
+                desc: "Aggregated placement and skill gap data updates the university's dashboard.",
+                role: "University Admin",
+                badge: "Governance",
+              },
+            ].map((stepItem, idx) => (
+              <div
+                key={idx}
+                className="rounded-2xl border border-cream-border bg-white p-6 shadow-xs hover:border-forest/40 hover:shadow-sm transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="h-8 w-8 rounded-lg bg-forest text-parchment font-extrabold text-xs flex items-center justify-center">
+                      {stepItem.step}
+                    </div>
+                    <Badge variant="outline" className="text-[10px] font-semibold">
+                      {stepItem.badge}
+                    </Badge>
+                  </div>
+                  <h3 className="text-base font-bold text-forest mt-2">
+                    {stepItem.title}
+                  </h3>
+                  <p className="text-xs text-ink-light leading-relaxed mt-2">
+                    {stepItem.desc}
+                  </p>
+                </div>
+                <div className="mt-5 pt-3 border-t border-cream-border/60 flex items-center justify-between text-[11px] text-ink-muted">
+                  <span>Stakeholder: <strong className="text-forest font-semibold">{stepItem.role}</strong></span>
+                  <ArrowRight className="h-3.5 w-3.5 text-gold" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PARADIGM SHIFT (Why Resume Keyword Screening Fails) */}
+      <section id="solution" className="py-20 sm:py-24 px-6 sm:px-8 lg:px-12 bg-white border-b border-cream-border">
         <div className="mx-auto max-w-6xl">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
             <Badge variant="moss" className="text-xs">The Closed-Loop Ecosystem</Badge>

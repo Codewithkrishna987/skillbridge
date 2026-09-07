@@ -20,10 +20,11 @@ export function Navbar() {
   const { isOpen: isDrawerOpen, toggle: toggleDrawer } = useSidebar();
 
   const navLinks = [
+    { label: "AI Pipeline", href: "/#ai-flow" },
+    { label: "Placement Flow", href: "/#placement-flow" },
     { label: "The Solution", href: "/#solution" },
-    { label: "For Students", href: "/#students" },
-    { label: "For Institutions", href: "/#institutions" },
-    { label: "For Industry", href: "/#industry" },
+    { label: "Portals", href: "/#students" },
+    { label: "SIH Docs", href: "/prototype-doc" },
   ];
 
   return (

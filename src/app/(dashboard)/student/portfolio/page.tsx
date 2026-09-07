@@ -38,7 +38,7 @@ export default function PortfolioPage() {
         <div>
           <h1 className="text-2xl font-bold text-zinc-900 tracking-tight flex items-center gap-2">
             <Award className="h-6 w-6 text-[#1B4332]" />
-            Verified Digital Portfolio
+            Verified Digital Portfolio (Step 7: Feedback & Portfolio)
           </h1>
           <p className="text-sm text-zinc-600 mt-1">
             Proof-of-work repository authenticated by academic faculty and corporate mentors.
@@ -47,6 +47,36 @@ export default function PortfolioPage() {
         <Button variant="primary" size="sm" className="text-xs flex items-center gap-1">
           <PlusCircle className="h-3.5 w-3.5" /> Add Project / Credential
         </Button>
+      </div>
+
+      {/* Auto-Populated Faculty Mentor Endorsement Card (Step 7) */}
+      <div className="rounded-2xl border-2 border-emerald-600/30 bg-emerald-50/70 p-5 shadow-xs space-y-3">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="flex items-center gap-2.5">
+            <div className="h-10 w-10 rounded-xl bg-[#1B4332] text-white flex items-center justify-center">
+              <ShieldCheck className="h-5 w-5 text-emerald-300" />
+            </div>
+            <div>
+              <div className="text-xs font-bold text-emerald-900 uppercase tracking-wider">
+                Institutional Endorsement Seal
+              </div>
+              <div className="text-sm font-bold text-zinc-900">
+                Endorsed by Dr. Aris Thorne (Faculty Academic Advisor)
+              </div>
+            </div>
+          </div>
+          <Badge className="bg-[#1B4332] text-white text-xs px-3 py-1 font-semibold">
+            Auto-Populated from Review Queue
+          </Badge>
+        </div>
+
+        <p className="text-xs text-emerald-950 italic bg-white/80 p-3 rounded-xl border border-emerald-200 leading-relaxed">
+          "Aarav Mehta has exhibited exceptional technical depth in React (90%) and TypeScript (85%). He is actively completing the Docker containerization micro-module under my departmental supervision. Fully endorsed for industry roles with prerequisite exemption."
+        </p>
+        <div className="flex flex-wrap items-center justify-between gap-2 text-[11px] text-emerald-800 pt-1">
+          <span>Target Industry: Nexura Cloud & Enterprise Systems</span>
+          <span>Cryptographically Sealed on Neon PostgreSQL • Zero Tampering</span>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

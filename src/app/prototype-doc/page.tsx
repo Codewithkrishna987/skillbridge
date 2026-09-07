@@ -98,10 +98,71 @@ export default function PrototypeDocPage() {
           </div>
         </section>
 
+        {/* Section 1.5: Skill Portal AI Implementation Flow */}
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-[#1B4332] border-b border-[#E4DFD1] pb-2">
+            2. Skill Portal AI Implementation Flow (5 Core Phases)
+          </h2>
+          <p className="text-xs text-zinc-600 leading-relaxed">
+            Our automated multi-stage AI pipeline orchestrates real-time indexing, semantic processing, and human-in-the-loop escalation:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 pt-1">
+            {[
+              { num: "1", title: "Skill Data Indexing", text: "Student assessment responses and industry skill requirements are structured and embedded in the database, with continuous checks to keep the skill taxonomy accurate and up to date." },
+              { num: "2", title: "Assessment Processing", text: "Each student's questionnaire and aptitude test responses are semantically matched against the current industry skill taxonomy to identify strengths and gaps in real time." },
+              { num: "3", title: "Skill Profile Generation", text: "The recommendation engine combines the student's skill profile with live industry and internship data to generate personalized course, internship, and career suggestions." },
+              { num: "4", title: "Matching & Escalation", text: "High-confidence matches are shown to the student instantly; ambiguous or low-confidence cases are flagged and routed to a mentor or academic advisor for manual review." },
+              { num: "5", title: "Continuous Feedback Loop", text: "Outcomes from internships and placements, along with student and recruiter feedback, are fed back into the model to keep recommendations accurate over time." },
+            ].map((p) => (
+              <div key={p.num} className="bg-white border border-[#E4DFD1] p-3.5 rounded-xl flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-1.5 mb-2">
+                    <span className="h-6 w-6 rounded-full bg-[#1B4332] text-white text-[11px] font-bold flex items-center justify-center shrink-0">
+                      {p.num}
+                    </span>
+                    <span className="font-bold text-xs text-zinc-900">{p.title}</span>
+                  </div>
+                  <p className="text-[11px] text-zinc-600 leading-relaxed">{p.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 1.6: End-to-End Skill Mapping & Placement Flow */}
+        <section className="space-y-4">
+          <h2 className="text-xl font-bold text-[#1B4332] border-b border-[#E4DFD1] pb-2">
+            3. End-to-End Skill Mapping & Placement Flow (9-Step Timeline)
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {[
+              { s: "1", title: "Student Registration", desc: "The student registers and logs into the unified Academia-Industry portal." },
+              { s: "2", title: "Skill Assessment", desc: "The student completes AI-driven questionnaires and technical aptitude tests." },
+              { s: "3", title: "Profile Generation", desc: "The system analyses test results to create a verified digital skill profile." },
+              { s: "4", title: "Smart Matching", desc: "The engine maps the profile to exact internships and jobs posted by industries." },
+              { s: "5", title: "Student Applies", desc: "The student reviews matched opportunities and submits applications directly." },
+              { s: "6", title: "Application Tracking", desc: "The portal tracks the application status through interviews to final placement." },
+              { s: "7", title: "Feedback & Portfolio", desc: "Mentor feedback and certificates auto-populate the student's digital portfolio." },
+              { s: "8", title: "Academician Loop", desc: "Academicians receive analytics to make data-driven curriculum updates." },
+              { s: "9", title: "Institutional Analytics", desc: "Aggregated placement and skill gap data updates the university's dashboard." },
+            ].map((step) => (
+              <div key={step.s} className="bg-white border border-[#E4DFD1] p-3 rounded-xl flex items-start gap-2.5">
+                <span className="h-6 w-6 rounded-md bg-[#E8B84B] text-[#1B4332] text-xs font-bold flex items-center justify-center shrink-0">
+                  {step.s}
+                </span>
+                <div>
+                  <h4 className="text-xs font-bold text-zinc-900">{step.title}</h4>
+                  <p className="text-[11px] text-zinc-600 mt-0.5 leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Section 2: Complete Completed Work Inventory */}
         <section className="space-y-4">
           <h2 className="text-xl font-bold text-[#1B4332] border-b border-[#E4DFD1] pb-2">
-            2. What Has Been Built Till Now (Technical Inventory)
+            4. What Has Been Built Till Now (Technical Inventory)
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-white border border-[#E4DFD1] p-4 rounded-xl">
