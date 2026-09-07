@@ -2,7 +2,9 @@ import { NextResponse } from "next/server";
 import { prisma } from "@/lib/db";
 import bcrypt from "bcryptjs";
 import { z } from "zod";
-import { Role, AccountStatus } from "@prisma/client";
+import type { Role, AccountStatus } from "@prisma/client";
+
+export const dynamic = "force-dynamic";
 
 const registerSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -63,8 +65,8 @@ export async function POST(req: Request) {
             name,
             email: email.toLowerCase(),
             passwordHash,
-            role: Role.STUDENT,
-            status: AccountStatus.ACTIVE,
+            role: "STUDENT" as Role,
+            status: "ACTIVE" as AccountStatus,
             studentProfile: {
               create: {
                 institutionId: institution.id,
@@ -82,8 +84,8 @@ export async function POST(req: Request) {
             name,
             email: email.toLowerCase(),
             passwordHash,
-            role: Role.ACADEMICIAN,
-            status: AccountStatus.ACTIVE,
+            role: "ACADEMICIAN" as Role,
+            status: "ACTIVE" as AccountStatus,
             academicianProfile: {
               create: {
                 institutionId: institution.id,
@@ -114,8 +116,8 @@ export async function POST(req: Request) {
           name,
           email: email.toLowerCase(),
           passwordHash,
-          role: Role.INDUSTRY,
-          status: AccountStatus.ACTIVE,
+          role: "INDUSTRY" as Role,
+          status: "ACTIVE" as AccountStatus,
           industryProfile: {
             create: {
               companyId: company.id,
